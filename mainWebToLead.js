@@ -8,14 +8,22 @@ $(document).ready(function () {
                 required: true,
                 emailValidator: true,
                 emailWhitelistedDomain: true
-            }
+            },
+            company: "required",
+            city: "required",
+            state: "required",
+            industry: "required"
         },
         messages: {
             first_name: "Please enter your firstname",
             last_name: "Please enter your lastname",
             email: {
                 required: "Please enter your email. We do not support public domain emails. e.g. gmail, yahoo and hotmail."
-            }
+            },
+            company: "Please enter your company name",
+            city: "Please enter your city name",
+            state: "Please enter your state name",
+            industry: "Please select your industry"
         },
         errorElement: "em",
         errorPlacement: function (error, element) {
