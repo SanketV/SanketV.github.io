@@ -4,7 +4,7 @@
 <head>
     <title>Sample web to lead.</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js"></script>
     <script type="text/javascript" src="mainWebToLead.js"></script>
 </head>
@@ -23,44 +23,96 @@
                         <h3 class="card-title"></h3>
                     </div>
                     <div class="card-body">
-                        <form id="qualtricsFrm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+                        <!-- <form id="qualtricsFrm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" 
+                            method="POST"> -->
+
+                        <form id="qualtricsFrm" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
                             method="POST">
 
-                            <input type=hidden name="oid" value="00Di0000000hPjF">
-                            <input type=hidden name="retURL" value="http://www.nbcdfw.com">
+                            <input type=hidden name="oid" value="00Dm00000008vBZ">
+                            <input type=hidden name="retURL" value="http://salesforce.com">
 
                             <!--  ----------------------------------------------------------------------  -->
                             <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
                             <!--  these lines if you wish to test in debug mode.                          -->
-                            <!-- <input type="hidden" name="debug" value=1> -->
-                            <!-- <input type="hidden" name="debugEmail" value="sanket_vaidya@hotmail.com"> -->
+                            <!--<input type="hidden" name="debug" value=1>
+                            <input type="hidden" name="debugEmail" value="sanket_vaidya@hotmail.com">-->
                             <!--  ----------------------------------------------------------------------  -->
 
                             <div class="form-group row">
-                                <label class="col-sm-4 col-form-label col-form-label-lg" for="first_name">First name</label>
+                                <label class="col-sm-4 col-form-label " for="first_name">First name</label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" id="first_name" name="first_name"
                                         placeholder="First name" maxlength="40" size="20" />
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-4 col-form-label col-form-label-lg" for="last_name">Last name</label>
+                                <label class="col-sm-4 col-form-label " for="last_name">Last name</label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last name"
                                         maxlength="80" size="20" />
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-4 col-form-label col-form-label-lg" for="email">Email</label>
+                                <label class="col-sm-4 col-form-label " for="email">Email</label>
                                 <div class="col-sm-5">
                                     <input type="email" class="form-control" id="email" name="email" placeholder="Email" />
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label class="col-sm-4 col-form-label " for="company">Company</label>
+                                <div class="col-sm-5">
+                                    <input id="company" maxlength="40" name="company" size="20" type="text" /><br>
+                                </div>
+                            </div>
+                            <div class="form-group row"> <label class="col-sm-4 col-form-label " for="city">City</label>
+                                <div class="col-sm-5">
+                                    <input id="city" maxlength="40" name="city" size="20" type="text" /><br>
+                                </div>
+                            </div>
+
+                            <div class="form-group row"> <label class="col-sm-4 col-form-label " for="state">State/Province</label>
+                                <div class="col-sm-5">
+                                    <input id="state" maxlength="20" name="state" size="20" type="text" /><br>
+                                </div>
+                            </div>
+                            <div class="form-group row"> <label class="col-sm-4 col-form-label " for="industry">Industry</label>
+                                <div class="col-sm-5">
+                                    <select id="industry" name="industry">
+                                        <option value="">--None--</option>
+                                        <option value="Academia">Academia</option>
+                                        <option value="B2B Manufacturing">B2B Manufacturing</option>
+                                        <option value="Business Services">Business Services</option>
+                                        <option value="Consumer Goods">Consumer Goods</option>
+                                        <option value="Federal Government">Federal Government</option>
+                                        <option value="Financial Services">Financial Services</option>
+                                        <option value="Healthcare Providers">Healthcare Providers</option>
+                                        <option value="High Tech">High Tech</option>
+                                        <option value="Market Research">Market Research</option>
+                                        <option value="Media &amp; Communications">Media &amp; Communications</option>
+                                        <option value="Municipal Government">Municipal Government</option>
+                                        <option value="Non-Profit &amp; Associations">Non-Profit &amp; Associations</option>
+                                        <option value="Other">Other</option>
+                                        <option value="Professional Services">Professional Services</option>
+                                        <option value="Restaurant">Restaurant</option>
+                                        <option value="Retail">Retail</option>
+                                        <option value="State Government">State Government</option>
+                                        <option value="Travel &amp; Hospitality">Travel &amp; Hospitality</option>
+                                        <option value="Unknown">Unknown</option>
+                                        <option value="Utilities">Utilities</option>
+                                        <option value="Wholesale">Wholesale</option>
+                                        <option value="Arts &amp; Entertainment">Arts &amp; Entertainment</option>
+                                    </select><br>
+                                </div>
+                            </div>
+
+                            Lead Notes:<textarea id="00N50000001XVQt" name="00N50000001XVQt" rows="3" type="text" wrap="soft"></textarea><br>
+                            <div class="form-group row">
                                 <div class="col-sm-9 col-sm-offset-4">
                                     <button type="submit" class="btn btn-primary" name="submit" value="Submit">Submit</button>
                                 </div>
                             </div>
+
                         </form>
                     </div>
                 </div>
