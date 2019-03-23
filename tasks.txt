@@ -1,5 +1,5 @@
 
-1. Add below fields from Partner-Sourced Lead layout to Web-To-Lead form.
+1. Added below fields from Partner-Sourced Lead layout to Web-To-Lead form.
 	-Website
 	-Product
 	-Parner Web-To-Lead
@@ -30,9 +30,15 @@
 	-Partner_Web_to_Lead__c  
 		
 2. Mapping of the field names to the form
-3. Formatting of the form
-4. Validation of the fields
+
+3. Formatting of the form. HTML/CSS
+
+4. UI Validation of the fields.
+
 5. Map Partner_Web_to_Lead__c  to “Partner Web to Lead” in Javascript
 
+6. Map Record Type Partner-Sourced Lead [Debugging for - Record type id not being mapped.]
+
+7. Mapping of Custom Fields - Ids are 18 digit tokens not accepted by Javascript.
 	
-	
+8. Testing of values being passed correctly in Salesforce.	

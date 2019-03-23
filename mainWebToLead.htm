@@ -11,397 +11,420 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-                <div class="page-header">
-                    <div class="alert alert-info" role="alert">
-                        <h4>Sample Web To Lead</h4>
-                    </div>
-                </div>
-                <div class="card " style="width: 80%; ">
-                    <div class="card-heading">
-                        <h3 class="card-title"></h3>
-                    </div>
-                    <div class="card-body">
-                        <!-- <form id="qualtricsFrm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" 
-                            method="POST"> -->
 
-                        <form id="qualtricsFrm"
-                            action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+    <form id="qualtricsFrm" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
-                            <input type=hidden name="oid" value="00Dm00000008vBZ">
-                            <input type=hidden name="retURL" value="http://salesforce.com">
-                            <input type=hidden name="00Nm0000002kdQr" value="Partner Web to Lead">
+        <input type=hidden name="oid" value="00Dm00000008vBZ">
+        <input type=hidden name="retURL" value="https://www.qualtrics.com/">
+        <input type=hidden name="00Nm0000002kdQr" value="Partner Web to Lead">
+        <input type=hidden name="recordType" id="recordType" value="01250000000AR24">
 
-                            <!--  ----------------------------------------------------------------------  -->
-                            <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-                            <!--  these lines if you wish to test in debug mode.                          -->
-                            <!--<input type="hidden" name="debug" value=1>
-                            <input type="hidden" name="debugEmail" value="sanket_vaidya@hotmail.com">-->
-                            <!--  ----------------------------------------------------------------------  -->
+        <!--  ----------------------------------------------------------------------  -->
+        <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+        <!--  these lines if you wish to test in debug mode.                          -->
+        <!-- <input type="hidden" name="debug" value=1> -->
+        <!-- <input type="hidden" name="debugEmail" value="sanket_vaidya@hotmail.com"> -->
+        <!--  ----------------------------------------------------------------------  -->
 
-                            <div class="form-group row">
-                                <label class="col-sm-4 col-form-label " for="first_name">First name</label>
-                                <div class="col-sm-5">
-                                    <input type="text" class="form-control" id="first_name" name="first_name"
-                                        maxlength="40" size="20" />
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-4 col-form-label " for="last_name">Last name</label>
-                                <div class="col-sm-5">
-                                    <input type="text" class="form-control" id="last_name" name="last_name"
-                                        maxlength="80" size="20" />
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-4 col-form-label " for="email">Email</label>
-                                <div class="col-sm-5">
-                                    <input type="email" class="form-control" id="email" name="email" />
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-4 col-form-label " for="company">Company</label>
-                                <div class="col-sm-5">
-                                    <input class="form-control" id="company" maxlength="40" name="company" size="20"
-                                        type="text" /><br>
-                                </div>
-                            </div>
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label " for="city">City</label>
-                                <div class="col-sm-5">
-                                    <input class="form-control" id="city" maxlength="40" name="city" size="20"
-                                        type="text" /><br>
-                                </div>
-                            </div>
-
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label "
-                                    for="state">State/Province</label>
-                                <div class="col-sm-5">
-                                    <input class="form-control" id="state" maxlength="20" name="state" size="20"
-                                        type="text" /><br>
-                                </div>
-                            </div>
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label "
-                                    for="industry">Industry</label>
-                                <div class="col-sm-5">
-                                    <select class="form-control" id="industry" name="industry">
-                                        <option value="">--None--</option>
-                                        <option value="Academia">Academia</option>
-                                        <option value="B2B Manufacturing">B2B Manufacturing</option>
-                                        <option value="Business Services">Business Services</option>
-                                        <option value="Consumer Goods">Consumer Goods</option>
-                                        <option value="Federal Government">Federal Government</option>
-                                        <option value="Financial Services">Financial Services</option>
-                                        <option value="Healthcare Providers">Healthcare Providers</option>
-                                        <option value="High Tech">High Tech</option>
-                                        <option value="Market Research">Market Research</option>
-                                        <option value="Media &amp; Communications">Media &amp; Communications</option>
-                                        <option value="Municipal Government">Municipal Government</option>
-                                        <option value="Non-Profit &amp; Associations">Non-Profit &amp; Associations
-                                        </option>
-                                        <option value="Other">Other</option>
-                                        <option value="Professional Services">Professional Services</option>
-                                        <option value="Restaurant">Restaurant</option>
-                                        <option value="Retail">Retail</option>
-                                        <option value="State Government">State Government</option>
-                                        <option value="Travel &amp; Hospitality">Travel &amp; Hospitality</option>
-                                        <option value="Unknown">Unknown</option>
-                                        <option value="Utilities">Utilities</option>
-                                        <option value="Wholesale">Wholesale</option>
-                                        <option value="Arts &amp; Entertainment">Arts &amp; Entertainment</option>
-                                    </select><br>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-sm-4 col-form-label " for="Lead Notes">
-                                    Lead Notes:
-                                </label>
-                                <div class="col-sm-5">
-                                    <textarea class="form-control" id="00N50000001XVQt" name="00N50000001XVQt" rows="3"
-                                        type="text" wrap="soft"></textarea>
-                                </div><br>
-                            </div>
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label "
-                                    for="URL">Website</label>
-                                <div class="col-sm-5"> <input class="form-control" id="URL" maxlength="80" name="URL"
-                                        size="20" type="text" /><br> </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-sm-4 col-form-label " for="URL">Product</label>
-                                <div class="col-sm-5">
-                                    <select class="form-control" id="00N50000002cL8H" multiple="multiple"
-                                        name="00N50000002cL8H" title="Product">
-                                        <option value="Research Suite">Research Suite</option>
-                                        <option value="Site Intercept">Site Intercept</option>
-                                        <option value="Target Audience">Target Audience</option>
-                                        <option value="360">360</option>
-                                        <option value="Employee Engagement">Employee Engagement
-                                        </option>
-                                        <option value="Panels">Panels</option>
-                                        <option value="Professional Services">Professional
-                                            Services</option>
-                                        <option value="Vocalize">Vocalize</option>
-                                    </select><br>
-                                </div>
-                            </div>
-
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label "
-                                    for="title">Title</label>
-                                <div class="col-sm-5"> <input class="form-control" id="title" maxlength="40"
-                                        name="title" size="20" type="text" /><br> </div>
-                            </div>
-
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label "
-                                    for="street">Street</label>
-                                <div class="col-sm-5"><textarea class="form-control" name="street"></textarea><br>
-                                </div>
-
-                            </div>
-
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label " for="zip">Zip</label>
-                                <div class="col-sm-5"> <input class="form-control" id="zip" maxlength="20" name="zip"
-                                        size="20" type="text" /><br> </div>
-                            </div>
-
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label "
-                                    for="country">Country</label>
-                                <div class="col-sm-5"> <input class="form-control" id="country" maxlength="40"
-                                        name="country" size="20" type="text" /><br> </div>
-                            </div>
-
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label "
-                                    for="country">Metric:</label>
-
-                                <div class="col-sm-5"><textarea class="form-control" id="00N5000000AG0G9"
-                                        name="00N5000000AG0G9" rows="3" type="text" wrap="soft"></textarea><br>
-                                </div>
-                            </div>
-
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label " for="country">Identify
-                                    Pain:</label>
-                                <div class="col-sm-5"><textarea class="form-control" id="00N5000000AG0GO"
-                                        name="00N5000000AG0GO" rows="3" type="text" wrap="soft"></textarea><br>
-                                </div>
-                            </div>
-
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label " for="country">Economic
-                                    Buyer:</label>
-                                <div class="col-sm-5"><textarea class="form-control" id="00N5000000AG0GE"
-                                        name="00N5000000AG0GE" type="text" wrap="soft"></textarea><br>
-                                </div>
-                            </div>
-
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label " for="country">Decision
-                                    Criteria:</label>
-                                <div class="col-sm-5"><textarea class="form-control" id="00N5000000AG0GJ"
-                                        name="00N5000000AG0GJ" rows="3" type="text" wrap="soft"></textarea><br>
-                                </div>
-                            </div>
-
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label "
-                                    for="country">Champions:</label>
-                                <div class="col-sm-5"><textarea class="form-control" id="00N5000000AG0GT"
-                                        name="00N5000000AG0GT" rows="3" type="text" wrap="soft"></textarea><br>
-                                </div>
-                            </div>
-
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label "
-                                    for="country">Compelling Event:</label>
-                                <div class="col-sm-5"><textarea class="form-control" id="00N50000002cL7K"
-                                        name="00N50000002cL7K" type="text" wrap="soft"></textarea><br>
-                                </div>
-                            </div>
-
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label " for="country">Decision
-                                    Process:</label>
-                                <div class="col-sm-5"><textarea class="form-control" id="00N50000002IMAl"
-                                        name="00N50000002IMAl" rows="3" type="text" wrap="soft"></textarea><br>
-                                </div>
-                            </div>
-
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label "
-                                    for="country">Competitors:</label>
-                                <div class="col-sm-5">
-                                    <select class="form-control" id="00N5000000AG0HM" multiple="multiple"
-                                        name="00N5000000AG0HM" title="Competitors">
-                                        <option value="Medallia">
-                                            Medallia</option>
-                                        <option value="Attensity">
-                                            Attensity</option>
-                                        <option value="CFMC">CFMC
-                                        </option>
-                                        <option value="Cint">Cint
-                                        </option>
-                                        <option value="Clarabridge">
-                                            Clarabridge</option>
-                                        <option value="ClickFox">
-                                            ClickFox</option>
-                                        <option value="Confirmit">
-                                            Confirmit</option>
-                                        <option value="CustVoX">
-                                            CustVoX</option>
-                                        <option value="Decipher">
-                                            Decipher</option>
-                                        <option value="Delighted">
-                                            Delighted</option>
-                                        <option value="Foresee">
-                                            Foresee</option>
-                                        <option value="Get Feedback">Get
-                                            Feedback</option>
-                                        <option value="Inmoment">
-                                            Inmoment</option>
-                                        <option value="Inquisite">
-                                            Inquisite</option>
-                                        <option value="iPerceptions">
-                                            iPerceptions</option>
-                                        <option value="iSKY">iSKY
-                                        </option>
-                                        <option value="Key Survey">
-                                            Key Survey</option>
-                                        <option value="Kinesis">
-                                            Kinesis</option>
-                                        <option value="MaritzCX">
-                                            MaritzCX</option>
-                                        <option value="Marsc">Marsc
-                                        </option>
-                                        <option value="Nebu">Nebu
-                                        </option>
-                                        <option value="NetRelector">
-                                            NetRelector</option>
-                                        <option value="Nexidia">
-                                            Nexidia</option>
-                                        <option value="Nice Systems">
-                                            Nice Systems</option>
-                                        <option value="OpinionLab">
-                                            OpinionLab</option>
-                                        <option value="Questback">
-                                            Questback</option>
-                                        <option value="Question Pro">
-                                            Question Pro</option>
-                                        <option value="Research Tracker">
-                                            Research Tracker
-                                        </option>
-                                        <option value="ResponseTek">
-                                            ResponseTek</option>
-                                        <option value="SatMetrix">
-                                            SatMetrix</option>
-                                        <option value="Snap Surveys">
-                                            Snap Surveys</option>
-                                        <option value="SPSS Dimensions">
-                                            SPSS Dimensions</option>
-                                        <option value="Survey Analytics">
-                                            Survey Analytics
-                                        </option>
-                                        <option value="Survey Gizmo">
-                                            Survey Gizmo</option>
-                                        <option value="Survey Monkey">
-                                            Survey Monkey</option>
-                                        <option value="SynGro">
-                                            SynGro</option>
-                                        <option value="TurnKey">
-                                            TurnKey</option>
-                                        <option value="Verint">
-                                            Verint</option>
-                                        <option value="Vision Critical">
-                                            Vision Critical</option>
-                                        <option value="Vovici">
-                                            Vovici</option>
-                                        <option value="Zoomerang">
-                                            Zoomerang</option>
-                                        <option value="Z-Telligence">
-                                            Z-Telligence</option>
-                                        <option value="Other">Other
-                                        </option>
-                                        <option value="AskNicely">
-                                            AskNicely</option>
-                                        <option value="TopBox">
-                                            TopBox</option>
-                                        <option value="UserVoice">
-                                            UserVoice</option>
-                                        <option value="Formstack">
-                                            Formstack</option>
-                                        <option value="Survicate">
-                                            Survicate</option>
-                                        <option value="GetFeedback">
-                                            GetFeedback</option>
-                                        <option value="REDcap">
-                                            REDcap</option>
-                                        <option value="QuickTapSurvey">
-                                            QuickTapSurvey</option>
-                                        <option value="SurveyCTO">
-                                            SurveyCTO</option>
-                                        <option value="Glint">Glint
-                                        </option>
-                                        <option value="Kenexa- IBM">
-                                            Kenexa- IBM</option>
-                                        <option value="Hay Group">
-                                            Hay Group</option>
-                                        <option value="Gallup">
-                                            Gallup</option>
-                                        <option value="CEB">CEB
-                                        </option>
-                                        <option value="Halogen">
-                                            Halogen</option>
-                                        <option value="Culture Amp">
-                                            Culture Amp</option>
-                                        <option value="Perceptyx">
-                                            Perceptyx</option>
-                                        <option value="DecisionWise">
-                                            DecisionWise</option>
-                                        <option value="Sirota">
-                                            Sirota</option>
-                                        <option value="Towers Watson">
-                                            Towers Watson</option>
-                                        <option value="Aon Hewitt">
-                                            Aon Hewitt</option>
-                                        <option value="Clicktools">
-                                            Clicktools</option>
-                                        <option value="Typeform">
-                                            Typeform</option>
-                                    </select><br>
-                                </div>
-                            </div>
-
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label " for="country">Partner
-                                    Account:</label>
-                                <div class="col-sm-5">
-                                    <input class="form-control" id="00N50000003eDvW" maxlength="200"
-                                        name="00N50000003eDvW" size="20" type="text" /><br>
-
-                                </div>
-                            </div>
-
-                            <div class="form-group row"> <label class="col-sm-4 col-form-label " for="country">Partner
-                                    Email:</label>
-                                <div class="col-sm-5">
-                                    <input class="form-control" id="00N50000003eDvR" maxlength="80"
-                                        name="00N50000003eDvR" size="20" type="text" /><br>
-                                </div>
-                            </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-9 col-sm-offset-4">
-                            <button type="submit" class="btn btn-primary" name="submit" value="Submit">Submit</button>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="page-header">
+                        <div class="alert alert-info" role="alert">
+                            <h4>Sample Web To Lead</h4>
                         </div>
                     </div>
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Lead Information</div>
+                            <div class="panel-body">
 
-                    </form>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label " for="company">Company</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control" id="company" maxlength="40" name="company" size="20"
+                                            type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                        for="URL">Website</label>
+                                    <div class="col-sm-5"> <input class="form-control" id="URL" maxlength="80"
+                                            name="URL" size="20" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                        for="industry">Industry</label>
+                                    <div class="col-sm-5">
+                                        <select class="form-control" id="industry" name="industry">
+                                            <option value="">--None--</option>
+                                            <option value="Academia">Academia</option>
+                                            <option value="B2B Manufacturing">B2B Manufacturing</option>
+                                            <option value="Business Services">Business Services</option>
+                                            <option value="Consumer Goods">Consumer Goods</option>
+                                            <option value="Federal Government">Federal Government</option>
+                                            <option value="Financial Services">Financial Services</option>
+                                            <option value="Healthcare Providers">Healthcare Providers</option>
+                                            <option value="High Tech">High Tech</option>
+                                            <option value="Market Research">Market Research</option>
+                                            <option value="Media &amp; Communications">Media &amp; Communications
+                                            </option>
+                                            <option value="Municipal Government">Municipal Government</option>
+                                            <option value="Non-Profit &amp; Associations">Non-Profit &amp; Associations
+                                            </option>
+                                            <option value="Other">Other</option>
+                                            <option value="Professional Services">Professional Services</option>
+                                            <option value="Restaurant">Restaurant</option>
+                                            <option value="Retail">Retail</option>
+                                            <option value="State Government">State Government</option>
+                                            <option value="Travel &amp; Hospitality">Travel &amp; Hospitality</option>
+                                            <option value="Unknown">Unknown</option>
+                                            <option value="Utilities">Utilities</option>
+                                            <option value="Wholesale">Wholesale</option>
+                                            <option value="Arts &amp; Entertainment">Arts &amp; Entertainment</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label " for="URL">Product</label>
+                                    <div class="col-sm-5">
+                                        <select class="form-control" id="00N50000002cL8H" multiple="multiple"
+                                            name="00N50000002cL8H" title="Product">
+                                            <option value="Research Suite">Research Suite</option>
+                                            <option value="Site Intercept">Site Intercept</option>
+                                            <option value="Target Audience">Target Audience</option>
+                                            <option value="360">360</option>
+                                            <option value="Employee Engagement">Employee Engagement
+                                            </option>
+                                            <option value="Panels">Panels</option>
+                                            <option value="Professional Services">Professional
+                                                Services</option>
+                                            <option value="Vocalize">Vocalize</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label " for="Lead Notes">
+                                        Lead Notes:
+                                    </label>
+                                    <div class="col-sm-5">
+                                        <textarea class="form-control" id="00N50000001XVQt" name="00N50000001XVQt"
+                                            rows="3" type="text" wrap="soft"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Main POC Information</div>
+                            <div class="panel-body">
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label " for="first_name">First name</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control" id="first_name" name="first_name"
+                                            maxlength="40" size="20" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label " for="last_name">Last name</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control" id="last_name" name="last_name"
+                                            maxlength="80" size="20" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label " for="email">Email</label>
+                                    <div class="col-sm-5">
+                                        <input type="email" class="form-control" id="email" name="email" />
+                                    </div>
+                                </div>
+                                <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                        for="title">Title</label>
+                                    <div class="col-sm-5"> <input class="form-control" id="title" maxlength="40"
+                                            name="title" size="20" type="text" /></div>
+                                </div>
+                                <div class="card " style="width: 100%; ">
+                                    <div class="card-heading">
+                                        <h3 class="card-title"></h3>Address</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                                for="street">Street</label>
+                                            <div class="col-sm-5"><textarea class="form-control"
+                                                    name="street"></textarea>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                                for="city">City</label>
+                                            <div class="col-sm-5">
+                                                <input class="form-control" id="city" maxlength="40" name="city"
+                                                    size="20" type="text" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                                for="state">State/Province</label>
+                                            <div class="col-sm-5">
+                                                <input class="form-control" id="state" maxlength="20" name="state"
+                                                    size="20" type="text" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                                for="zip">Zip</label>
+                                            <div class="col-sm-5"> <input class="form-control" id="zip" maxlength="20"
+                                                    name="zip" size="20" type="text" />
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                                for="country">Country</label>
+                                            <div class="col-sm-5"> <input class="form-control" id="country"
+                                                    maxlength="40" name="country" size="20" type="text" /> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">MEDDICCC Information</div>
+                            <div class="panel-body">
+                                <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                        for="country">Metric:</label>
+
+                                    <div class="col-sm-5"><textarea class="form-control" id="00N5000000AG0G9"
+                                            name="00N5000000AG0G9" rows="3" type="text" wrap="soft"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                        for="country">Identify
+                                        Pain:</label>
+                                    <div class="col-sm-5"><textarea class="form-control" id="00N5000000AG0GO"
+                                            name="00N5000000AG0GO" rows="3" type="text" wrap="soft"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                        for="country">Economic
+                                        Buyer:</label>
+                                    <div class="col-sm-5"><textarea class="form-control" id="00N5000000AG0GE"
+                                            name="00N5000000AG0GE" type="text" wrap="soft"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                        for="country">Decision
+                                        Criteria:</label>
+                                    <div class="col-sm-5"><textarea class="form-control" id="00N5000000AG0GJ"
+                                            name="00N5000000AG0GJ" rows="3" type="text" wrap="soft"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                        for="country">Champions:</label>
+                                    <div class="col-sm-5"><textarea class="form-control" id="00N5000000AG0GT"
+                                            name="00N5000000AG0GT" rows="3" type="text" wrap="soft"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                        for="country">Compelling Event:</label>
+                                    <div class="col-sm-5"><textarea class="form-control" id="00N50000002cL7K"
+                                            name="00N50000002cL7K" type="text" wrap="soft"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                        for="country">Decision
+                                        Process:</label>
+                                    <div class="col-sm-5"><textarea class="form-control" id="00N50000002IMAl"
+                                            name="00N50000002IMAl" rows="3" type="text" wrap="soft"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                        for="country">Competitors:</label>
+                                    <div class="col-sm-5">
+                                        <select class="form-control" id="00N5000000AG0HM" multiple="multiple"
+                                            name="00N5000000AG0HM" title="Competitors">
+                                            <option value="Medallia">
+                                                Medallia</option>
+                                            <option value="Attensity">
+                                                Attensity</option>
+                                            <option value="CFMC">CFMC
+                                            </option>
+                                            <option value="Cint">Cint
+                                            </option>
+                                            <option value="Clarabridge">
+                                                Clarabridge</option>
+                                            <option value="ClickFox">
+                                                ClickFox</option>
+                                            <option value="Confirmit">
+                                                Confirmit</option>
+                                            <option value="CustVoX">
+                                                CustVoX</option>
+                                            <option value="Decipher">
+                                                Decipher</option>
+                                            <option value="Delighted">
+                                                Delighted</option>
+                                            <option value="Foresee">
+                                                Foresee</option>
+                                            <option value="Get Feedback">Get
+                                                Feedback</option>
+                                            <option value="Inmoment">
+                                                Inmoment</option>
+                                            <option value="Inquisite">
+                                                Inquisite</option>
+                                            <option value="iPerceptions">
+                                                iPerceptions</option>
+                                            <option value="iSKY">iSKY
+                                            </option>
+                                            <option value="Key Survey">
+                                                Key Survey</option>
+                                            <option value="Kinesis">
+                                                Kinesis</option>
+                                            <option value="MaritzCX">
+                                                MaritzCX</option>
+                                            <option value="Marsc">Marsc
+                                            </option>
+                                            <option value="Nebu">Nebu
+                                            </option>
+                                            <option value="NetRelector">
+                                                NetRelector</option>
+                                            <option value="Nexidia">
+                                                Nexidia</option>
+                                            <option value="Nice Systems">
+                                                Nice Systems</option>
+                                            <option value="OpinionLab">
+                                                OpinionLab</option>
+                                            <option value="Questback">
+                                                Questback</option>
+                                            <option value="Question Pro">
+                                                Question Pro</option>
+                                            <option value="Research Tracker">
+                                                Research Tracker
+                                            </option>
+                                            <option value="ResponseTek">
+                                                ResponseTek</option>
+                                            <option value="SatMetrix">
+                                                SatMetrix</option>
+                                            <option value="Snap Surveys">
+                                                Snap Surveys</option>
+                                            <option value="SPSS Dimensions">
+                                                SPSS Dimensions</option>
+                                            <option value="Survey Analytics">
+                                                Survey Analytics
+                                            </option>
+                                            <option value="Survey Gizmo">
+                                                Survey Gizmo</option>
+                                            <option value="Survey Monkey">
+                                                Survey Monkey</option>
+                                            <option value="SynGro">
+                                                SynGro</option>
+                                            <option value="TurnKey">
+                                                TurnKey</option>
+                                            <option value="Verint">
+                                                Verint</option>
+                                            <option value="Vision Critical">
+                                                Vision Critical</option>
+                                            <option value="Vovici">
+                                                Vovici</option>
+                                            <option value="Zoomerang">
+                                                Zoomerang</option>
+                                            <option value="Z-Telligence">
+                                                Z-Telligence</option>
+                                            <option value="Other">Other
+                                            </option>
+                                            <option value="AskNicely">
+                                                AskNicely</option>
+                                            <option value="TopBox">
+                                                TopBox</option>
+                                            <option value="UserVoice">
+                                                UserVoice</option>
+                                            <option value="Formstack">
+                                                Formstack</option>
+                                            <option value="Survicate">
+                                                Survicate</option>
+                                            <option value="GetFeedback">
+                                                GetFeedback</option>
+                                            <option value="REDcap">
+                                                REDcap</option>
+                                            <option value="QuickTapSurvey">
+                                                QuickTapSurvey</option>
+                                            <option value="SurveyCTO">
+                                                SurveyCTO</option>
+                                            <option value="Glint">Glint
+                                            </option>
+                                            <option value="Kenexa- IBM">
+                                                Kenexa- IBM</option>
+                                            <option value="Hay Group">
+                                                Hay Group</option>
+                                            <option value="Gallup">
+                                                Gallup</option>
+                                            <option value="CEB">CEB
+                                            </option>
+                                            <option value="Halogen">
+                                                Halogen</option>
+                                            <option value="Culture Amp">
+                                                Culture Amp</option>
+                                            <option value="Perceptyx">
+                                                Perceptyx</option>
+                                            <option value="DecisionWise">
+                                                DecisionWise</option>
+                                            <option value="Sirota">
+                                                Sirota</option>
+                                            <option value="Towers Watson">
+                                                Towers Watson</option>
+                                            <option value="Aon Hewitt">
+                                                Aon Hewitt</option>
+                                            <option value="Clicktools">
+                                                Clicktools</option>
+                                            <option value="Typeform">
+                                                Typeform</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Submitter</div>
+                            <div class="panel-body">
+                                <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                        for="country">Partner
+                                        Account:</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control" id="00N50000003eDvW" maxlength="200"
+                                            name="00N50000003eDvW" size="20" type="text" />
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row"> <label class="col-sm-4 col-form-label "
+                                        for="country">Partner
+                                        Email:</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control" id="00N50000003eDvR" maxlength="80"
+                                            name="00N50000003eDvR" size="20" type="email" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card " style="width: 80%; ">
+                        <div class="card-heading">
+                            <h3 class="card-title"></h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <div class="col-sm-9 col-sm-offset-4">
+                                    <button type="submit" class="btn btn-primary" name="submit"
+                                        value="Submit">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-
-    <script type="text/javascript">
-        /*$.validator.setDefaults({
-            submitHandler: function () {
-                alert("submitted!");
-            }
-        });*/
-    </script>
+    </form>
 </body>
 
 </html>

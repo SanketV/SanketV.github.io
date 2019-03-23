@@ -6,23 +6,23 @@ $(document).ready(function () {
             last_name: "required",
             email: {
                 required: true,
+                emailValidator: true
+            },
+            company: "required",
+            industry: "required",
+            "00N50000003eDvR": {
+                required: true,
                 emailValidator: true,
                 emailWhitelistedDomain: true
             },
-            company: "required",
-            city: "required",
-            state: "required",
-            industry: "required"
         },
         messages: {
             first_name: "Please enter your firstname",
             last_name: "Please enter your lastname",
             email: {
-                required: "Please enter your email. We do not support public domain emails. e.g. gmail, yahoo and hotmail."
+                required: "Please enter your email."
             },
             company: "Please enter your company name",
-            city: "Please enter your city name",
-            state: "Please enter your state name",
             industry: "Please select your industry"
         },
         errorElement: "em",
@@ -60,15 +60,16 @@ $(document).ready(function () {
         unhighlight: function (element, errorClass, validClass) {
             $(element).parents(".col-sm-5").addClass("has-success").removeClass("has-error");
             $(element).next("span").addClass("glyphicon-ok").removeClass("glyphicon-remove");
-        },
+        }
+        /*,
         submitHandler: function (event, form) {
             alert('Thanks for submitting this lead!');
-            form.preventDefault();
-        }
+            //form.preventDefault();
+        }*/
     });
 
     jQuery.validator.addMethod("emailValidator", function (value, element) {
-        console.log('• email validator •');
+
         return this.optional(element) ||
             /^([A-Za-z0-9_\-\.]){1,}\@([A-Za-z0-9_\-\.]){1,}\.([A-Za-z]{2,4})$/
             .test(value);
@@ -76,11 +77,11 @@ $(document).ready(function () {
     }, "Entered email is not correct.");
 
     jQuery.validator.addMethod("emailWhitelistedDomain", function (value, element) {
-        console.log('email whitelisted domain');
+
         return this.optional(element) ||
 
             /^([A-Za-z0-9_\-\.]){1,}\@(?!gmail\.com)(?!yahoo\.com)(?!hotmail\.com)([A-Za-z0-9_\-\.]){1,}\.([A-Za-z]{2,4})$/
             .test(value);
 
-    }, "Just to reiterate public domain emails are not allowed. i.e. yahoo, hotmail and gmail.");
+    }, "Public domain emails are not allowed. i.e. yahoo, hotmail and gmail.");
 });
