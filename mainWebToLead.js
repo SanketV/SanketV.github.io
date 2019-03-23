@@ -60,6 +60,10 @@ $(document).ready(function () {
         unhighlight: function (element, errorClass, validClass) {
             $(element).parents(".col-sm-5").addClass("has-success").removeClass("has-error");
             $(element).next("span").addClass("glyphicon-ok").removeClass("glyphicon-remove");
+        },
+        submitHandler: function (event, form) {
+            alert('Thanks for submitting this lead!');
+            form.preventDefault();
         }
     });
 
@@ -74,7 +78,7 @@ $(document).ready(function () {
     jQuery.validator.addMethod("emailWhitelistedDomain", function (value, element) {
         console.log('email whitelisted domain');
         return this.optional(element) ||
-            // /^([\w-.]+@(?!gmail\.com)(?!yahoo\.com)(?!hotmail\.com)([\w-]+.)+[\w-]{2,4})?$/
+
             /^([A-Za-z0-9_\-\.]){1,}\@(?!gmail\.com)(?!yahoo\.com)(?!hotmail\.com)([A-Za-z0-9_\-\.]){1,}\.([A-Za-z]{2,4})$/
             .test(value);
 

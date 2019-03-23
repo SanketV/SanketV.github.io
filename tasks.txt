@@ -1,0 +1,38 @@
+
+1. Add below fields from Partner-Sourced Lead layout to Web-To-Lead form.
+	-Website
+	-Product
+	-Parner Web-To-Lead
+	*Main POC Information
+	-Title
+	-Address
+		Street
+		City
+		State
+		Zip
+		Country
+	*MEDDICCC Information
+	-Metric
+	-Identify Pain
+	-Economic Buyer
+	-Champions
+	-Decision Criteria
+	-Compelling Event
+	-Decision Process
+	-Competitors
+		Available
+		Chosen
+	*Submitter Information
+	-Partner_Account__c	
+	-Partner_Email__c (Email Validation)
+	
+		
+	-Partner_Web_to_Lead__c  
+		
+2. Mapping of the field names to the form
+3. Formatting of the form
+4. Validation of the fields
+5. Map Partner_Web_to_Lead__c  to “Partner Web to Lead” in Javascript
+
+	
+	
