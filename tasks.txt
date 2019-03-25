@@ -29,7 +29,7 @@
 		
 	-Partner_Web_to_Lead__c  
 		
-2. Mapping of the field names to the form
+2. Arrangement of the fields in applicable sections.
 
 3. Formatting of the form. HTML/CSS
 
