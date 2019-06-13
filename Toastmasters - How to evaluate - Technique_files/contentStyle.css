@@ -1,0 +1,45 @@
+h1, h2,.pageHeader{
+font: bold 15pt arial;
+color: 336699;
+}
+
+h3,.subheader{
+font-weight: bold;
+font-style:italic;
+}
+
+td,body{
+font: normal 13px verdana;
+color:333;
+line-height:15px;
+text-decoration:none;
+}
+
+a {
+text-decoration:underline;
+}
+
+
+
+
+/*
+     FILE ARCHIVED ON 23:06:26 Jul 16, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:32:42 Jun 13, 2019.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 2970.344 (3)
+  esindex: 0.012
+  captures_list: 3024.123
+  CDXLines.iter: 19.395 (3)
+  PetaboxLoader3.datanode: 3006.409 (4)
+  exclusion.robots: 0.136
+  exclusion.robots.policy: 0.126
+  RedisCDXSource: 30.709
+  PetaboxLoader3.resolve: 512.763
+  load_resource: 606.397
+*/

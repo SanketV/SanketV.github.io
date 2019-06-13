@@ -1,0 +1,104 @@
+.sidelink {
+font: bold 11px arial;
+color:#ffffff; 
+text-decoration:none;
+}
+
+.sidelinkselected{
+font: bold 11px arial;
+color:orange; 
+text-decoration:none;
+}
+
+.sidelink:hover {
+font: bold 11px arial;
+color:orange; 
+text-decoration:none;
+}
+
+.sidelink1 {
+font: bold 11px arial;
+color:#ffffff; 
+text-decoration:none;
+padding-left:10px !important;
+}
+
+.sidelink1 p{padding-left:10px;}
+
+.sidelink1 a{text-indent: 10px;}
+
+
+
+.search_headers td {
+  font-weight:bold;
+  font-size:8pt;
+}
+
+.search_table td {
+  font-size:8pt;
+}
+
+ 	
+/* Start Form Validation Styles*/
+.validation_failed {
+  border: 1px solid red;
+}
+.error_msg {
+  color:red;
+}
+/* End  Form Validation Styles */
+
+
+
+#menu {width:100%; margin-top:20px ; _margin-top:0px }
+#menu ul li{ list-style-type:none; border-bottom:1px solid #214C76; margin:0px;  width:120px; margin-top:0px ; margin-left:10px; padding: 4px 0px 4px 0px; }
+#menu ul li a{ padding: 10px 0px 10px 0px;}
+#menu ul { margin:0px; padding:0}
+#menu ul li:hover{ list-style-type:none;    }
+
+#menu a:hover{color: orange;}
+
+
+
+.Nav_Side_Level1,.Nav_Side_Level2,.Nav_Side_Leveln,.Nav_Side_Level_Selected,.Nav_Top{
+  text-decoration:none;
+}
+
+
+.Nav_Side_Level1{
+color:#ffffff; font-size:11px; text-decoration:none; font-weight: bold; }
+
+
+.Nav_Side_Level2{ color:orange; font-size:11px; text-decoration:none; font-weight: bold;  }	
+ 
+
+.Nav_Side_Leveln{
+  color:#ffffff; font-size:11px; text-decoration:none; font-weight: bold; padding-left:15px;
+}
+
+
+.Nav_Side_Level_Selected{
+
+}
+
+/*
+     FILE ARCHIVED ON 23:08:13 Jul 16, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:32:39 Jun 13, 2019.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 458.041 (3)
+  esindex: 0.012
+  captures_list: 753.679
+  CDXLines.iter: 18.893 (3)
+  PetaboxLoader3.datanode: 470.456 (4)
+  exclusion.robots: 0.269
+  exclusion.robots.policy: 0.252
+  RedisCDXSource: 16.839
+  PetaboxLoader3.resolve: 100.311
+  load_resource: 142.089
+*/
